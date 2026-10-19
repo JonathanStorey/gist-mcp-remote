@@ -1,0 +1,19 @@
+# Deployment manifest for wrangler-based Python edge runtimes.
+#
+# Secrets never go in this file. Set them once from a terminal:
+#   npx wrangler secret put GITHUB_CLIENT_SECRET
+#   npx wrangler secret put SIGNING_SECRET
+# For `npx wrangler dev`, put the same names in a local .dev.vars file (git-ignored).
+
+name = "remote-serverless-gist-mcp"
+main = "src/main.py"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["python_workers"]
+
+[vars]
+# Client ID of your GitHub OAuth App (public, not a secret).
+GITHUB_CLIENT_ID = ""
+# Optional: the public URL, if it differs from the URL requests arrive on (e.g. a proxy or custom domain).
+# PUBLIC_BASE_URL = "https://gist-mcp.example.com"
+# Optional: link to the source code, shown on the home page.
+# SOURCE_URL = "https://github.com/YOUR-ACCOUNT/remote-serverless-gist-mcp"
