@@ -5,7 +5,7 @@
 #   npx wrangler secret put SIGNING_SECRET
 # For `npx wrangler dev`, put the same names in a local .dev.vars file (git-ignored).
 
-name = "remote-serverless-gist-mcp"
+name = "gist-mcp-remote"
 main = "src/main.py"
 compatibility_date = "2025-09-01"
 compatibility_flags = ["python_workers"]
